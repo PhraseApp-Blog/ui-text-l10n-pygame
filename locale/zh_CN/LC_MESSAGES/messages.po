@@ -1,0 +1,81 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-07-28 21:24+0800\n"
+"PO-Revision-Date: 2021-07-28 21:24+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: mygame.py:14 mygame.py:132
+msgid "window_title"
+msgstr "示例 - 游戏"
+
+#: mygame.py:15 mygame.py:146
+msgid "app_title"
+msgstr "主菜单"
+
+#: mygame.py:16 mygame.py:150
+msgid "name"
+msgstr "名字"
+
+#: mygame.py:17 mygame.py:151
+msgid "difficulty"
+msgstr "难度"
+
+#: mygame.py:18 mygame.py:152
+msgid "language"
+msgstr "语言"
+
+#: mygame.py:19 mygame.py:153
+msgid "play"
+msgstr "开始"
+
+#: mygame.py:20 mygame.py:154
+msgid "quit"
+msgstr "推出"
+
+#: mygame.py:67
+msgid "game_message"
+msgid_plural "game_message_plural"
+msgstr[0] "每收集一枚硬币，您将获得 %d 分。"
+
+#: mygame.py:76
+msgid "instruction_back_to_menu"
+msgstr "按 ESC 返回主菜单"
+
+#: mygame.py:77
+msgid "score"
+msgstr "分数"
+
+#: mygame.py:133
+msgid "easy"
+msgstr "简单"
+
+#: mygame.py:133
+msgid "medium"
+msgstr "普通"
+
+#: mygame.py:133
+msgid "hard"
+msgstr "困难"
+
+#: mygame.py:140
+msgid "widget_font"
+msgstr "dengxian"
+
+#: mygame.py:150
+msgid "name_default"
+msgstr "李华"
+

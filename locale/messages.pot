@@ -1,0 +1,82 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-07-28 21:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: mygame.py:14 mygame.py:132
+msgid "window_title"
+msgstr ""
+
+#: mygame.py:15 mygame.py:146
+msgid "app_title"
+msgstr ""
+
+#: mygame.py:16 mygame.py:150
+msgid "name"
+msgstr ""
+
+#: mygame.py:17 mygame.py:151
+msgid "difficulty"
+msgstr ""
+
+#: mygame.py:18 mygame.py:152
+msgid "language"
+msgstr ""
+
+#: mygame.py:19 mygame.py:153
+msgid "play"
+msgstr ""
+
+#: mygame.py:20 mygame.py:154
+msgid "quit"
+msgstr ""
+
+#: mygame.py:67
+#, python-format
+msgid "You will gain %d point per coin collected."
+msgid_plural "You will gain %d points per coin collected."
+msgstr[0] ""
+msgstr[1] ""
+
+#: mygame.py:76
+msgid "instruction_back_to_menu"
+msgstr ""
+
+#: mygame.py:77
+msgid "score"
+msgstr ""
+
+#: mygame.py:133
+msgid "easy"
+msgstr ""
+
+#: mygame.py:133
+msgid "medium"
+msgstr ""
+
+#: mygame.py:133
+msgid "hard"
+msgstr ""
+
+#: mygame.py:140
+msgid "widget_font"
+msgstr ""
+
+#: mygame.py:150
+msgid "name_default"
+msgstr ""
+
