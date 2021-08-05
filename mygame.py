@@ -50,10 +50,10 @@ def set_locale(selected: Tuple, value: Any) -> None:
     Set the language of the game.
     :return: None
     """
-    global locale, translations
+    global active_locale, translations
     print('Set language to {} ({})'.format(selected[0], value))
-    locale = value
-    translations[locale].install()
+    active_locale = value
+    translations[active_locale].install()
     update_widget_ui()
 
 
@@ -70,9 +70,9 @@ def play_game() -> None:
     font = pygame.font.SysFont(_('widget_font'), 20)
     # load font via file path
     # font = pygame.font.Font('C:\WINDOWS\FONTS\SIMHEI.TTF', 30)
-    global main_menu, clock, difficulty, locale, translations
+    global main_menu, clock, difficulty, active_locale, translations
 
-    text = translations[locale].ngettext('game_message', 'game_message_plural', difficulty) % (difficulty)
+    text = translations[active_locale].ngettext('game_message', 'game_message_plural', difficulty) % (difficulty)
     if difficulty == 1:
         f = font.render(f"[{_('easy')}] {text}", True, (255, 255, 255))
     elif difficulty == 2:
@@ -82,7 +82,7 @@ def play_game() -> None:
     else:
         raise ValueError('unknown difficulty {0}'.format(difficulty))
     f_esc = font.render(_('instruction_back_to_menu'), True, (255, 255, 255))
-    f_score = font.render(_('score') + ': ' + format_decimal(12345.6, locale=locale), True, (255, 255, 255))
+    f_score = font.render(_('score') + ': ' + format_decimal(12345.6, locale=active_locale), True, (255, 255, 255))
 
     # Draw random color and text
     bg_color = random_color()
@@ -128,13 +128,13 @@ def play_game() -> None:
 
 
 locales = [x.split('\\')[1] for x in glob.glob('locale/*') if os.path.isdir(x)]
-locale = 'en_US'
+active_locale = 'en_US'
 translations = {}
 
-for i in locales:
-    translations[i] = gettext.translation('messages', localedir='locale', languages=[i])
+for locale in locales:
+    translations[locale] = gettext.translation('messages', localedir='locale', languages=[locale])
 
-translations[locale].install()
+translations[active_locale].install()
 
 surface = create_example_window(_('window_title'), (600, 400))
 DIFFICULTIES = [(_('easy'), 1), (_('medium'), 2), (_('hard'), 3)]
