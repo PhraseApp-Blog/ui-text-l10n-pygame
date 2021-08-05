@@ -5,15 +5,18 @@ import gettext
 import glob
 import os
 from babel.numbers import format_decimal
+from babel.dates import format_date
 
 from typing import Tuple, Any
 from random import randrange
+import datetime
 
 
 def update_widget_ui():
+    active_font = _('widget_font')
     # update window title and font
     pygame.display.set_caption(_('window_title'))
-    main_menu._menubar.update_font({'name': _('widget_font')})
+    main_menu._menubar.update_font({'name': active_font})
 
     # update widget title
     main_menu.set_title(_('app_title'))
@@ -24,11 +27,11 @@ def update_widget_ui():
     quit_button.set_title(_('quit'))
 
     # update widget font
-    name_input.update_font({'name': _('widget_font')})
-    difficulty_selector.update_font({'name': _('widget_font')})
-    language_selector.update_font({'name': _('widget_font')})
-    play_button.update_font({'name': _('widget_font')})
-    quit_button.update_font({'name': _('widget_font')})
+    name_input.update_font({'name': active_font})
+    difficulty_selector.update_font({'name': active_font})
+    language_selector.update_font({'name': active_font})
+    play_button.update_font({'name': active_font})
+    quit_button.update_font({'name': active_font})
 
     # update default value and items in selector
     name_input.set_default_value(_('name_default'))
@@ -74,15 +77,16 @@ def play_game() -> None:
 
     text = translations[active_locale].ngettext('game_message', 'game_message_plural', difficulty) % (difficulty)
     if difficulty == 1:
-        f = font.render(f"[{_('easy')}] {text}", True, (255, 255, 255))
+        f_difficulty = font.render(f"[{_('easy')}] {text}", True, (255, 255, 255))
     elif difficulty == 2:
-        f = font.render(f"[{_('medium')}] {text}", True, (255, 255, 255))
+        f_difficulty = font.render(f"[{_('medium')}] {text}", True, (255, 255, 255))
     elif difficulty == 3:
-        f = font.render(f"[{_('hard')}] {text}", True, (255, 255, 255))
+        f_difficulty = font.render(f"[{_('hard')}] {text}", True, (255, 255, 255))
     else:
         raise ValueError('unknown difficulty {0}'.format(difficulty))
     f_esc = font.render(_('instruction_back_to_menu'), True, (255, 255, 255))
     f_score = font.render(_('score') + ': ' + format_decimal(12345.6, locale=active_locale), True, (255, 255, 255))
+    f_date = font.render(_('last_updated') % format_date(datetime.datetime.now(), locale=active_locale), True, (255, 255, 255))
 
     # Draw random color and text
     bg_color = random_color()
@@ -119,11 +123,12 @@ def play_game() -> None:
 
         # Continue playing
         surface.fill(bg_color)
-        surface.blit(f, (int((WIDTH - f.get_width()) / 2),
-                         int(HEIGHT / 2 - f.get_height())))
+        surface.blit(f_difficulty, (int((WIDTH - f_difficulty.get_width()) / 2),
+                     int(HEIGHT / 2 - f_difficulty.get_height())))
         surface.blit(f_esc, (int((WIDTH - f_esc.get_width()) / 2),
                              int(HEIGHT / 2 + f_esc.get_height())))
         surface.blit(f_score, (10, 10))
+        surface.blit(f_date, (10, 50))
         pygame.display.flip()
 
 
