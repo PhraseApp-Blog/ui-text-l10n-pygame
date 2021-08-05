@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-28 21:24+0800\n"
+"POT-Creation-Date: 2021-08-05 17:05+0800\n"
 "PO-Revision-Date: 2021-07-28 21:24+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans_CN\n"
@@ -18,64 +18,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: mygame.py:14 mygame.py:132
+#: mygame.py:16 mygame.py:73 mygame.py:152
+msgid "widget_font"
+msgstr "dengxian"
+
+#: mygame.py:18 mygame.py:144
 msgid "window_title"
 msgstr "示例 - 游戏"
 
-#: mygame.py:15 mygame.py:146
+#: mygame.py:22 mygame.py:158
 msgid "app_title"
 msgstr "主菜单"
 
-#: mygame.py:16 mygame.py:150
+#: mygame.py:23 mygame.py:162
 msgid "name"
 msgstr "名字"
 
-#: mygame.py:17 mygame.py:151
+#: mygame.py:24 mygame.py:163
 msgid "difficulty"
 msgstr "难度"
 
-#: mygame.py:18 mygame.py:152
+#: mygame.py:25 mygame.py:164
 msgid "language"
 msgstr "语言"
 
-#: mygame.py:19 mygame.py:153
+#: mygame.py:26 mygame.py:165
 msgid "play"
 msgstr "开始"
 
-#: mygame.py:20 mygame.py:154
+#: mygame.py:27 mygame.py:166
 msgid "quit"
 msgstr "推出"
 
-#: mygame.py:67
+#: mygame.py:37 mygame.py:162
+msgid "name_default"
+msgstr "李华"
+
+#: mygame.py:38 mygame.py:145
+msgid "easy"
+msgstr "简单"
+
+#: mygame.py:38 mygame.py:145
+msgid "medium"
+msgstr "普通"
+
+#: mygame.py:38 mygame.py:145
+msgid "hard"
+msgstr "困难"
+
+#: mygame.py:78
 msgid "game_message"
 msgid_plural "game_message_plural"
 msgstr[0] "每收集一枚硬币，您将获得 %d 分。"
 
-#: mygame.py:76
+#: mygame.py:87
 msgid "instruction_back_to_menu"
 msgstr "按 ESC 返回主菜单"
 
-#: mygame.py:77
+#: mygame.py:88
 msgid "score"
 msgstr "分数"
 
-#: mygame.py:133
-msgid "easy"
-msgstr "简单"
-
-#: mygame.py:133
-msgid "medium"
-msgstr "普通"
-
-#: mygame.py:133
-msgid "hard"
-msgstr "困难"
-
-#: mygame.py:140
-msgid "widget_font"
-msgstr "dengxian"
-
-#: mygame.py:150
-msgid "name_default"
-msgstr "李华"
+#: mygame.py:89
+msgid "last_updated"
+msgstr "最后更新于%s"
 
