@@ -66,9 +66,10 @@ def random_color() -> Tuple[int, int, int]:
 
 
 def play_game() -> None:
-    # Define globals
+    # load system font
     font = pygame.font.SysFont(_('widget_font'), 20)
-    #font = pygame.font.Font('C:\WINDOWS\FONTS\SIMHEI.TTF', 30)
+    # load font via file path
+    # font = pygame.font.Font('C:\WINDOWS\FONTS\SIMHEI.TTF', 30)
     global main_menu, clock, difficulty, locale, translations
 
     text = translations[locale].ngettext('game_message', 'game_message_plural', difficulty) % (difficulty)
@@ -129,7 +130,6 @@ def play_game() -> None:
 locales = [x.split('\\')[1] for x in glob.glob('locale/*') if os.path.isdir(x)]
 locale = 'en_US'
 translations = {}
-# print(locales)
 
 for i in locales:
     translations[i] = gettext.translation('messages', localedir='locale', languages=[i])
