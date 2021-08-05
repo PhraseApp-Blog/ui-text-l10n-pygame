@@ -218,20 +218,19 @@ Run it as follows:
 
 Example user interface for `en_US`
 
-![en_US](./menu_en_US.png)
+![menu_en_US](./menu_en_US.png)
+
+![play_en_US](./play_en_US.png)
 
 Example user interface for `de_DE`
 
-![de_DE](./menu_de_DE.png)
+![menu_de_DE](./menu_de_DE.png)
+
+![play_de_DE](./play_de_DE.png)
 
 Example user interface for `zh_CN`
 
-![zh_CN](./menu_zh_CN.png)
+![menu_zh_CN](./menu_zh_CN.png)
 
-Example user interface when playing game in `easy` mode (pluralization showcase)
+![play_zh_CN](./play_zh_CN.png)
 
-![play_easy](./play_easy.png)
-
-Example user interface when playing game in `hard` mode (pluralization showcase)
-
-![play_hard](./play_hard.png)
